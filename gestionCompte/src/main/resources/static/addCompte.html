@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>New Compte</title>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body ng-app="MyBanqueApp" ng-controller="MyBanqueCtrl">
+
+<div class="col-md-6 col-sm-6 col-xs-12">
+   <div class="panel panel-info spacer">
+   <div class="panel-heading">Nouveau Compte</div>
+   <div class="panel-body">
+   <form>
+     <div class="form-group">
+     <label>Code: </label>
+     <input type="text" ng-model="newCompte.code">
+     </div>
+     <div class="form-group">
+     <label>Solde: </label>
+     <input type="text" ng-model="newCompte.solde">
+     </div>
+      <div class="form-group">
+     <label>Client: </label>
+     <div class="input-group input-group-search">
+
+        <input type="text" class="form-control"  ng-model="newCompte.client" name="q" required >
+        <span class="input-group-addon">
+            <button class="btn-search" ng-disabled="search.$invalid">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </span>
+        
+    </div>
+    </div>
+     <div class="form-group">
+     <button ng-click="saveCompte()" class="btn btn-primary">Save</button>
+     </div>
+    
+     </form>
+     </div>
+     </div>
+     </div>
+
+
+
+
+
+
+
+<script type="text/javascript" src="angular/angular.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
